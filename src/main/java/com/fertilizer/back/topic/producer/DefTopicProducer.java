@@ -22,7 +22,7 @@ public class DefTopicProducer extends BaseTopicProducer {
     public void sendDef(){
         System.out.println("send def");
 //        AbcDto dto = new AbcDto("st",10);
-        this.send("ss");
+        this.send("def");
     }
 
 

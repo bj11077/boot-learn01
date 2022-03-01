@@ -17,25 +17,15 @@ public class TopicProducerFactory {
     @Value("${spring.kafka.bootstrap-servers}")
     private String bootStrapServer;
 
-
-
-
     Producer<String,Object> producer;
 
     @PostConstruct
     public void init(){
-//        Map<String,Object> props = new HashMap<>();
-//        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,bootStrapServer);
-//        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
-//        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, CustomObjectSerializer.class);
         Properties props = new Properties();
         props.put("key.serializer", StringSerializer.class);
-//        props.put("value.serializer", CustomObjectSerializer.class);
         props.put("value.serializer", CustomObjectSerializer.class);
-
         props.put("bootstrap.servers", bootStrapServer);
         producer = new KafkaProducer<String, Object>(props);
-
     }
 
 

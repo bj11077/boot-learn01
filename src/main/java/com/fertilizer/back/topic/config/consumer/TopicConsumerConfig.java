@@ -30,6 +30,7 @@ public class TopicConsumerConfig {
         config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,bootStrapServer);
         config.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         config.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, CustomObjectDesirializer.class);
+        config.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, CustomObjectDesirializer.class);
         config.put(ConsumerConfig.GROUP_ID_CONFIG,groupId);
         return config;
     }
