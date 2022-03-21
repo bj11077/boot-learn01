@@ -18,7 +18,7 @@ public class DefTopicProducer extends BaseTopicProducer {
     }
 
 
-    @Scheduled(fixedDelay = 1000)
+    //@Scheduled(fixedDelay = 1000)
     public void sendDef(){
         System.out.println("send def");
 //        AbcDto dto = new AbcDto("st",10);
